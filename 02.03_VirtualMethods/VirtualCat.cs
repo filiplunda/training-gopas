@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace Training._02._03_VirtualMethods
 {
-    class Animal
+    class VirtualCat: VirtualAnimal
     {
-        public string Sound()
-
-        //public virtual string Sound()
+        public override string Sound()
         {
-            return "Generic sound";
+            return "meow-meow";
         }
+
+        /*new public string Sound()
+        {
+            return "meow-meow";
+        }*/
     }
 }

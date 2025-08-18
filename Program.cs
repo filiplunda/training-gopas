@@ -2,6 +2,10 @@
 using _02._01_Overriding.Exercise6;
 using _02._01_Overriding.Exercise7;
 using _02._02_AutomaticProperties;
+using Training._02._03_VirtualMethods;
+using Training._02._04_AbstractClass;
+using Training._02._05_Using_Interface;
+using Stream = Training._02._04_AbstractClass.Stream;
 
 //Exercise 6
 Console.WriteLine("02.01_Overriding");
@@ -80,5 +84,78 @@ Console.WriteLine(weekDays["Mo"]);
 Console.WriteLine(weekDays["Tu"]);
 Console.WriteLine(weekDays["We"]);
 
+Console.WriteLine();
 Console.WriteLine("02.03_VirtualMethods");
+
+Training._02._03_VirtualMethods.Animal[] animals = { new VirtualDog(), new VirtualCat(), new VirtualDog(), new VirtualCat() };
+
+foreach(Training._02._03_VirtualMethods.VirtualAnimal item in animals)
+{
+    Console.WriteLine(item.Sound());
+
+    /*if(item is VirtualCat)
+    {
+        Console.WriteLine(((VirtualCat)item).Sound());
+    }
+    else if (item is VirtualDog)
+    {
+        Console.WriteLine(((VirtualDog)item).Sound());
+    }*/
+}
+
+Console.WriteLine();
+Console.WriteLine("02.04_Abstract class");
+
+//Stream stream = new Stream();
+Training._02._04_AbstractClass.FileStream stream = new Training._02._04_AbstractClass.FileStream();
+stream.Open();
+stream.Close();
+
+Stream[] streams = new Stream[2];
+streams[0] = new Training._02._04_AbstractClass.FileStream();
+streams[1] = new Training._02._04_AbstractClass.MemoryStream();
+
+OpenStreams(streams);
+CloseStreams(streams);
+
+static void OpenStreams(Stream[] streams)
+{
+    foreach(Stream item in streams)
+    {
+        item.Open();
+    }
+}
+
+static void CloseStreams(Stream[] streams)
+{
+    foreach (Stream item in streams)
+    {
+        item.Close();
+    }
+}
+
+Console.WriteLine();
+Console.WriteLine("02.05_Using interface");
+
+//CardPayment cardPayment = new CardPayment();
+//cardPayment.ProcessPayment();
+//IPayment payment = cardPayment;
+//payment.ProcessPayment();
+
+//BankTransferPayment bankTransferPayment = new BankTransferPayment();
+//payment = bankTransferPayment;
+//payment.ProcessPayment();
+//bankTransferPayment.ProcessPayment();
+
+var paymentManager = new PaymentManager();
+
+var cardPayment = new CardPayment();
+var bankTransferPayment = new BankTransferPayment();
+
+paymentManager.ProcessPayments(cardPayment);
+paymentManager.ProcessPayments(bankTransferPayment);
+paymentManager.ProcessPayments(new MobilePayment());
+
+
+paymentManager.ShowPaymentHistory();
 
