@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U7Yv1zB/W1o=",
+  "dgSpecHash": "KERbLyeTv9A=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Student\\Documents\\2125\\Training\\Training.csproj",
+  "projectFilePath": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Training.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Student\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.304\\microsoft.net.sdk.compilers.toolset.9.0.304.nupkg.sha512"
   ],
