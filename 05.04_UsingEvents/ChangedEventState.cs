@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Training._05._04_UsingEvents
+{
+    enum ChangedEventState
+    {
+        Added,
+        Changed,
+        Cleared
+    }
+}
