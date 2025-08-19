@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Training._02._03_VirtualMethods
+{
+    class Animal
+    {
+        public string Sound()
+
+        //public virtual string Sound()
+        {
+            return "Generic sound";
+        }
+    }
+}
