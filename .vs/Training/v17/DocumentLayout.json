@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -74,11 +78,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-19T07:47:44.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Stack.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\03.01_GenericTypes\\Stack.cs",
               "RelativeDocumentMoniker": "03.01_GenericTypes\\Stack.cs",
@@ -90,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PaymentManager.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.05_Using Interface\\PaymentManager.cs",
               "RelativeDocumentMoniker": "02.05_Using Interface\\PaymentManager.cs",
@@ -102,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CardPayment.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.05_Using Interface\\CardPayment.cs",
               "RelativeDocumentMoniker": "02.05_Using Interface\\CardPayment.cs",
@@ -114,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IPayment.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.05_Using Interface\\IPayment.cs",
               "RelativeDocumentMoniker": "02.05_Using Interface\\IPayment.cs",
@@ -126,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "MemoryStream.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.04_AbstractClass\\MemoryStream.cs",
               "RelativeDocumentMoniker": "02.04_AbstractClass\\MemoryStream.cs",
@@ -138,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "FileStream.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.04_AbstractClass\\FileStream.cs",
               "RelativeDocumentMoniker": "02.04_AbstractClass\\FileStream.cs",
@@ -150,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Stream.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.04_AbstractClass\\Stream.cs",
               "RelativeDocumentMoniker": "02.04_AbstractClass\\Stream.cs",
@@ -162,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -174,8 +191,12 @@
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GenericClass.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\03.01_GenericTypes\\GenericClass.cs",
               "RelativeDocumentMoniker": "03.01_GenericTypes\\GenericClass.cs",
@@ -186,12 +207,8 @@
               "WhenOpened": "2025-08-19T07:37:14.244Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\README.md",
               "RelativeDocumentMoniker": "README.md",
@@ -203,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MobilePayment.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.05_Using Interface\\MobilePayment.cs",
               "RelativeDocumentMoniker": "02.05_Using Interface\\MobilePayment.cs",
@@ -215,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "BankTransferPayment.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.05_Using Interface\\BankTransferPayment.cs",
               "RelativeDocumentMoniker": "02.05_Using Interface\\BankTransferPayment.cs",
@@ -227,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "VirtualAnimal.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.03_VirtualMethods\\VirtualAnimal.cs",
               "RelativeDocumentMoniker": "02.03_VirtualMethods\\VirtualAnimal.cs",
@@ -239,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "VirtualDog.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.03_VirtualMethods\\VirtualDog.cs",
               "RelativeDocumentMoniker": "02.03_VirtualMethods\\VirtualDog.cs",
@@ -251,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "VirtualCat.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.03_VirtualMethods\\VirtualCat.cs",
               "RelativeDocumentMoniker": "02.03_VirtualMethods\\VirtualCat.cs",
@@ -263,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Animal.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.03_VirtualMethods\\Animal.cs",
               "RelativeDocumentMoniker": "02.03_VirtualMethods\\Animal.cs",
