@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\05.05_eventaccessor\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:05.05_eventaccessor\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\05.05_eventaccessor\\extendedworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:05.05_eventaccessor\\extendedworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\05.04_usingevents\\listwithchangedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -126,7 +126,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -134,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ExtendedWorker.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\05.05_EventAccessor\\ExtendedWorker.cs",
               "RelativeDocumentMoniker": "05.05_EventAccessor\\ExtendedWorker.cs",
@@ -142,18 +142,17 @@
               "RelativeToolTip": "05.05_EventAccessor\\ExtendedWorker.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T12:51:06.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T12:51:06.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Worker.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\05.05_EventAccessor\\Worker.cs",
               "RelativeDocumentMoniker": "05.05_EventAccessor\\Worker.cs",
               "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\05.05_EventAccessor\\Worker.cs",
               "RelativeToolTip": "05.05_EventAccessor\\Worker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T12:44:03.792Z",
               "EditorCaption": ""
@@ -161,15 +160,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Training",
+              "Title": "Training.csproj",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Training.csproj",
               "RelativeDocumentMoniker": "Training.csproj",
               "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Training.csproj",
               "RelativeToolTip": "Training.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-19T12:42:13.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T12:42:13.367Z"
             },
             {
               "$type": "Document",
@@ -181,8 +179,7 @@
               "RelativeToolTip": "05.04_UsingEvents\\ListWIthChangedEvent.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T12:35:33.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T12:35:33.44Z"
             },
             {
               "$type": "Document",
@@ -194,7 +191,19 @@
               "RelativeToolTip": "05.04_UsingEvents\\IntListWIthChangedEvent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T11:35:06.858Z",
+              "WhenOpened": "2025-08-19T11:35:06.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwBUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T12:35:22.146Z",
               "EditorCaption": ""
             },
             {
@@ -207,21 +216,7 @@
               "RelativeToolTip": "05.02_DelegateCallBack\\DelegateHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAUwAgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T11:12:07.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAJcBAAAAAAAAAAAIwKwBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T12:35:22.146Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T11:12:07.229Z"
             },
             {
               "$type": "Document",
@@ -233,8 +228,7 @@
               "RelativeToolTip": "05.01_UsingDelegates\\UsingDelegates.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T09:46:14.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T09:46:14.125Z"
             },
             {
               "$type": "Document",
@@ -258,8 +252,7 @@
               "RelativeToolTip": "05.04_UsingEvents\\ChangedEventState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T12:29:45.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T12:29:45.356Z"
             },
             {
               "$type": "Document",
@@ -271,8 +264,7 @@
               "RelativeToolTip": "05.04_UsingEvents\\ChangedEventArgs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T12:30:32.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T12:30:32.11Z"
             },
             {
               "$type": "Document",
