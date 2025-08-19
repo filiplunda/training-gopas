@@ -5,6 +5,7 @@ using _02._02_AutomaticProperties;
 using Training._02._03_VirtualMethods;
 using Training._02._04_AbstractClass;
 using Training._02._05_Using_Interface;
+using Training._03._01_GenericTypes;
 using Stream = Training._02._04_AbstractClass.Stream;
 
 //Exercise 6
@@ -158,4 +159,46 @@ paymentManager.ProcessPayments(new MobilePayment());
 
 
 paymentManager.ShowPaymentHistory();
+
+Console.WriteLine();
+Console.WriteLine("03.01_Generic types");
+
+//Stack stack = new Stack();
+Training._03._01_GenericTypes.Stack<int> stack = new Training._03._01_GenericTypes.Stack<int>();
+
+stack.Push(1);
+stack.Push(2);
+stack.Push(3);
+
+Console.WriteLine(stack.Pop());
+Console.WriteLine(stack.Pop());
+Console.WriteLine(stack.Pop());
+
+/*Console.WriteLine((int)stack.Pop());
+Console.WriteLine((int)stack.Pop());
+Console.WriteLine((int)stack.Pop());
+
+stack.Push(1);
+stack.Push("2");
+stack.Push(new int[] {1,2,3});
+
+Console.WriteLine((int[])stack.Pop());
+Console.WriteLine((string)stack.Pop());
+Console.WriteLine((int)stack.Pop());*/
+
+Training._03._01_GenericTypes.Stack<string> stringStack = new Training._03._01_GenericTypes.Stack<string>();
+
+stringStack.Push("A");
+stringStack.Push("B");
+stringStack.Push("C");
+
+Console.WriteLine(stringStack.Pop());
+Console.WriteLine(stringStack.Pop());
+Console.WriteLine(stringStack.Pop());
+
+GenericClass<int> mc = new GenericClass<int>();
+Console.WriteLine(mc.GetValue());
+
+GenericClass<string> sc = new GenericClass<string>();
+Console.WriteLine(sc.GetValue());
 

@@ -7,6 +7,22 @@
       "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\03.01_generictypes\\genericclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:03.01_generictypes\\genericclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\03.01_generictypes\\stack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:03.01_generictypes\\stack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\02.03_virtualmethods\\virtualanimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:02.03_virtualmethods\\virtualanimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\02.05_using interface\\mobilepayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:02.05_using interface\\mobilepayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,14 +63,6 @@
       "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:02.03_virtualmethods\\virtualdog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\02.03_virtualmethods\\animal - copy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:02.03_virtualmethods\\animal - copy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\02.03_virtualmethods\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:02.03_virtualmethods\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -66,24 +74,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MobilePayment.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.05_Using Interface\\MobilePayment.cs",
-              "RelativeDocumentMoniker": "02.05_Using Interface\\MobilePayment.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.05_Using Interface\\MobilePayment.cs",
-              "RelativeToolTip": "02.05_Using Interface\\MobilePayment.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAewBYAAAAFAAAAAAAAAA==",
+              "Title": "GenericClass.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\03.01_GenericTypes\\GenericClass.cs",
+              "RelativeDocumentMoniker": "03.01_GenericTypes\\GenericClass.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\03.01_GenericTypes\\GenericClass.cs",
+              "RelativeToolTip": "03.01_GenericTypes\\GenericClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T13:42:57.395Z",
+              "WhenOpened": "2025-08-19T07:37:14.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "Stack.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\03.01_GenericTypes\\Stack.cs",
+              "RelativeDocumentMoniker": "03.01_GenericTypes\\Stack.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\03.01_GenericTypes\\Stack.cs",
+              "RelativeToolTip": "03.01_GenericTypes\\Stack.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T07:04:03.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "PaymentManager.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.05_Using Interface\\PaymentManager.cs",
               "RelativeDocumentMoniker": "02.05_Using Interface\\PaymentManager.cs",
@@ -91,12 +112,11 @@
               "RelativeToolTip": "02.05_Using Interface\\PaymentManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T13:35:25.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T13:35:25.709Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "CardPayment.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.05_Using Interface\\CardPayment.cs",
               "RelativeDocumentMoniker": "02.05_Using Interface\\CardPayment.cs",
@@ -104,12 +124,11 @@
               "RelativeToolTip": "02.05_Using Interface\\CardPayment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T13:09:28.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T13:09:28.311Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "IPayment.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.05_Using Interface\\IPayment.cs",
               "RelativeDocumentMoniker": "02.05_Using Interface\\IPayment.cs",
@@ -117,12 +136,11 @@
               "RelativeToolTip": "02.05_Using Interface\\IPayment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T13:08:44.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T13:08:44.869Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "MemoryStream.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.04_AbstractClass\\MemoryStream.cs",
               "RelativeDocumentMoniker": "02.04_AbstractClass\\MemoryStream.cs",
@@ -130,12 +148,11 @@
               "RelativeToolTip": "02.04_AbstractClass\\MemoryStream.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T13:03:33.123Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T13:03:33.123Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "FileStream.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.04_AbstractClass\\FileStream.cs",
               "RelativeDocumentMoniker": "02.04_AbstractClass\\FileStream.cs",
@@ -143,12 +160,11 @@
               "RelativeToolTip": "02.04_AbstractClass\\FileStream.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T12:59:40.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T12:59:40.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Stream.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.04_AbstractClass\\Stream.cs",
               "RelativeDocumentMoniker": "02.04_AbstractClass\\Stream.cs",
@@ -156,8 +172,7 @@
               "RelativeToolTip": "02.04_AbstractClass\\Stream.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T12:48:09.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T12:48:09.517Z"
             },
             {
               "$type": "Document",
@@ -167,7 +182,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAEwKEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALIAAAAAAAAAAAAEwMoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-18T12:35:22.146Z",
               "EditorCaption": ""
@@ -178,7 +193,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-08-18T13:49:15.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "MobilePayment.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.05_Using Interface\\MobilePayment.cs",
+              "RelativeDocumentMoniker": "02.05_Using Interface\\MobilePayment.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.05_Using Interface\\MobilePayment.cs",
+              "RelativeToolTip": "02.05_Using Interface\\MobilePayment.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAewBYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T13:42:57.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "BankTransferPayment.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.05_Using Interface\\BankTransferPayment.cs",
               "RelativeDocumentMoniker": "02.05_Using Interface\\BankTransferPayment.cs",
@@ -186,38 +226,23 @@
               "RelativeToolTip": "02.05_Using Interface\\BankTransferPayment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T13:30:21.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T13:30:21.508Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "README.md",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\README.md",
-              "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\README.md",
-              "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-08-18T12:45:44.503Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Animal - Copy.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.03_VirtualMethods\\Animal - Copy.cs",
-              "RelativeDocumentMoniker": "02.03_VirtualMethods\\Animal - Copy.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.03_VirtualMethods\\Animal - Copy.cs",
-              "RelativeToolTip": "02.03_VirtualMethods\\Animal - Copy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "VirtualAnimal.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.03_VirtualMethods\\VirtualAnimal.cs",
+              "RelativeDocumentMoniker": "02.03_VirtualMethods\\VirtualAnimal.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.03_VirtualMethods\\VirtualAnimal.cs",
+              "RelativeToolTip": "02.03_VirtualMethods\\VirtualAnimal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T12:43:12.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T12:43:12.852Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "VirtualDog.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.03_VirtualMethods\\VirtualDog.cs",
               "RelativeDocumentMoniker": "02.03_VirtualMethods\\VirtualDog.cs",
@@ -225,12 +250,11 @@
               "RelativeToolTip": "02.03_VirtualMethods\\VirtualDog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T12:35:03.825Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T12:35:03.825Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "VirtualCat.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.03_VirtualMethods\\VirtualCat.cs",
               "RelativeDocumentMoniker": "02.03_VirtualMethods\\VirtualCat.cs",
@@ -238,12 +262,11 @@
               "RelativeToolTip": "02.03_VirtualMethods\\VirtualCat.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T12:35:07.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T12:35:07.576Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Animal.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\02.03_VirtualMethods\\Animal.cs",
               "RelativeDocumentMoniker": "02.03_VirtualMethods\\Animal.cs",
@@ -251,8 +274,7 @@
               "RelativeToolTip": "02.03_VirtualMethods\\Animal.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T12:30:47.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T12:30:47.852Z"
             }
           ]
         }
