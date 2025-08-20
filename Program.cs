@@ -19,6 +19,7 @@ using Training._06._01_NewFunctionality;
 using System.Data.Common;
 using System;
 using System.Runtime.CompilerServices;
+using System.Collections.Generic;
 
 //#nullable enable
 
@@ -736,19 +737,120 @@ internal class Program
 
         Console.WriteLine();
         Console.WriteLine("----------------------07.01 Anonymous types----------------------");
-    }
 
-    static string ToSentence(string sentence)
-    {
-        if (string.IsNullOrEmpty(sentence)) return sentence;
-        sentence = sentence[0].ToString().ToUpper() + sentence.Substring(1);
-        if (sentence[^1] != '.')
+        var anonymousEmployee = new { FirstName = "Karel", LastName = "Novak" };
+        Console.WriteLine("{0} {1}", anonymousEmployee.FirstName, anonymousEmployee.LastName);
+
+        //anonymousEmployee.FirstName = "Martin"; Anonymous types are immutable
+
+        //var anonymousEmployee2 = new { FirstName = "Karel", LastName = "Novak" };
+        var anonymousEmployee2 = new { LastName = "Novak", FirstName = "Karel" };
+
+
+        Console.WriteLine(anonymousEmployee.Equals(anonymousEmployee2));
+        Console.WriteLine(anonymousEmployee.GetHashCode());
+
+        Console.WriteLine(anonymousEmployee.GetType().ToString());
+        Console.WriteLine(anonymousEmployee2.GetType().ToString());
+
+        Console.WriteLine(anonymousEmployee.GetType().BaseType.ToString());
+        Console.WriteLine(anonymousEmployee2.GetType().BaseType.ToString());
+
+        ShowEmployeeUsingReflection(anonymousEmployee);
+        ShowEmployeeUsingDynamicType(anonymousEmployee);
+        ShowEmployeeUsingGenerics(anonymousEmployee);
+        ShowEmployeeUsingTuple(new Tuple<string, string>(anonymousEmployee.FirstName, anonymousEmployee.LastName));
+        ShowEmployeeUsingTuple(Tuple.Create(anonymousEmployee.FirstName, anonymousEmployee.LastName));
+        ShowEmployeeUsingValueTuple((anonymousEmployee.FirstName, anonymousEmployee.LastName));
+
+        //var anonymousList = new[] { new { FirstName = "ListName", LastName = "ListSurname" } };
+        var anonymousList = new[] { new { FirstName = "", LastName = "" } }.ToList();
+        anonymousList.Clear();
+
+        anonymousList.Add(new { FirstName = "Karel", LastName = "Novak" });
+        anonymousList.Add(new { FirstName = "Martin", LastName = "Novak" });
+
+        foreach (var item in anonymousList)
         {
-            sentence += ".";
+            Console.WriteLine("{0} {1}", item.FirstName, item.LastName);
         }
 
-        return sentence;
+        Console.WriteLine();
+        Console.WriteLine("----------------------07.02 Anonymous methods and Lambda expressions----------------------");
+
+        int[] anonymousArray = { 10, 20, 30, 40 };
+        AnonymousListArray(anonymousArray);
+
+        AnonymousListArrayDelegate anonymousDelegate = new AnonymousListArrayDelegate(AnonymousListArray);
+
+        anonymousDelegate(new int[] { 10, 20, 30, 40 });
+
+        AnonymousListArrayDelegate anonymousDelegate2;
+
+        anonymousDelegate2 = delegate (int[] list) 
+        {
+            foreach (int item in list)
+            {
+                Console.WriteLine(item);
+            }
+        };
+
+        anonymousDelegate2(new int[] { 10, 20, 30, 40 });
+
+        Array.ForEach<int>(anonymousArray, delegate(int item) { Console.WriteLine(item); });
+
+        int[] funcList = Array.FindAll<int>(anonymousArray, delegate(int item) { return item > 20; });
+
+        Array.ForEach<int>(funcList, delegate (int item) { Console.WriteLine(item); });
+
+
     }
+
+    delegate void AnonymousListArrayDelegate(int[] list);
+
+    static void AnonymousListArray(int[] list)
+    {
+        foreach(int item in list)
+        {
+            Console.WriteLine(item);
+        }
+    }
+
+    static void ShowEmployeeUsingReflection(object o)
+    {
+        //Console.WriteLine(o.FirstName);
+        Console.WriteLine(o.GetType().GetProperty("FirstName").GetValue(o, null));
+    }
+
+    static void ShowEmployeeUsingDynamicType(dynamic employee)
+    {
+        Console.WriteLine("{0} {1}", employee.FirstName, employee.LastName);
+    }
+
+    static void ShowEmployeeUsingGenerics(object o)
+    {
+        var employee = new { FirstName = "Karel", LastName = "Novak" };
+
+        var e = Cast(employee, o);
+        Console.WriteLine("{0} {1}", e.FirstName, e.LastName);
+    }
+
+    static void ShowEmployeeUsingTuple(Tuple<string, string> e)
+    {
+        Console.WriteLine("{0} {1}", e.Item1, e.Item2);
+    }
+
+    static void ShowEmployeeUsingValueTuple((string firstName, string lastName) e)
+    {
+        Console.WriteLine("{0} {1}", e.firstName, e.lastName);
+    }
+
+    static T Cast<T>(T type, object o)
+    {
+        return (T)o;
+    }
+
+    //var anonymousEmployee3 = new { FirstName = "Karel", LastName = "Novak" };
 
     static char[] GetSubArray(char[] text, int start, int end)
     {

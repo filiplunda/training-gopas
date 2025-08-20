@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\03.01_generictypes\\genericclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:03.01_generictypes\\genericclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\06.01_newfunctionality\\initdeveloper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:06.01_newfunctionality\\initdeveloper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -95,10 +99,6 @@
       "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:03.01_generictypes\\stack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\03.01_generictypes\\genericclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:03.01_generictypes\\genericclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|c:\\users\\student\\documents\\2125\\training-gopas\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{E4242D31-7C11-41AE-BE6C-E32B3572D881}|Training.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
@@ -158,7 +158,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -166,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "InitDeveloper.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\06.01_NewFunctionality\\InitDeveloper.cs",
               "RelativeDocumentMoniker": "06.01_NewFunctionality\\InitDeveloper.cs",
@@ -174,12 +174,11 @@
               "RelativeToolTip": "06.01_NewFunctionality\\InitDeveloper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T11:55:52.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T11:55:52.47Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Extensions.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\06.01_NewFunctionality\\Extensions.cs",
               "RelativeDocumentMoniker": "06.01_NewFunctionality\\Extensions.cs",
@@ -187,12 +186,11 @@
               "RelativeToolTip": "06.01_NewFunctionality\\Extensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T11:39:28.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T11:39:28.648Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ObjectDepartment.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\06.01_NewFunctionality\\ObjectDepartment.cs",
               "RelativeDocumentMoniker": "06.01_NewFunctionality\\ObjectDepartment.cs",
@@ -200,12 +198,11 @@
               "RelativeToolTip": "06.01_NewFunctionality\\ObjectDepartment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T11:32:44.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T11:32:44.446Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ObjectEmployee.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\06.01_NewFunctionality\\ObjectEmployee.cs",
               "RelativeDocumentMoniker": "06.01_NewFunctionality\\ObjectEmployee.cs",
@@ -213,12 +210,11 @@
               "RelativeToolTip": "06.01_NewFunctionality\\ObjectEmployee.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T11:27:23.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T11:27:23.226Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PartialEmployee.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\06.01_NewFunctionality\\PartialEmployee.cs",
               "RelativeDocumentMoniker": "06.01_NewFunctionality\\PartialEmployee.cs",
@@ -226,12 +222,24 @@
               "RelativeToolTip": "06.01_NewFunctionality\\PartialEmployee.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T11:24:20.659Z",
+              "WhenOpened": "2025-08-20T11:24:20.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAAQDAAAAAAAAAADwvyMDAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T12:35:22.146Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ListWIthChangedEvent.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\05.04_UsingEvents\\ListWIthChangedEvent.cs",
               "RelativeDocumentMoniker": "05.04_UsingEvents\\ListWIthChangedEvent.cs",
@@ -243,20 +251,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAALwCAAAAAAAAAAAmwN4CAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "GenericClass.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\03.01_GenericTypes\\GenericClass.cs",
+              "RelativeDocumentMoniker": "03.01_GenericTypes\\GenericClass.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\03.01_GenericTypes\\GenericClass.cs",
+              "RelativeToolTip": "03.01_GenericTypes\\GenericClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T12:35:22.146Z",
+              "WhenOpened": "2025-08-19T07:37:14.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "IntListWIthChangedEvent.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\05.04_UsingEvents\\IntListWIthChangedEvent.cs",
               "RelativeDocumentMoniker": "05.04_UsingEvents\\IntListWIthChangedEvent.cs",
@@ -268,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ExtensionEmployee.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\06.01_NewFunctionality\\ExtensionEmployee.cs",
               "RelativeDocumentMoniker": "06.01_NewFunctionality\\ExtensionEmployee.cs",
@@ -276,12 +284,11 @@
               "RelativeToolTip": "06.01_NewFunctionality\\ExtensionEmployee.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T11:16:08.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T11:16:08.699Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ExtendedString.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\06.01_NewFunctionality\\ExtendedString.cs",
               "RelativeDocumentMoniker": "06.01_NewFunctionality\\ExtendedString.cs",
@@ -289,12 +296,11 @@
               "RelativeToolTip": "06.01_NewFunctionality\\ExtendedString.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T11:04:36.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T11:04:36.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MethodExtender.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\06.01_NewFunctionality\\MethodExtender.cs",
               "RelativeDocumentMoniker": "06.01_NewFunctionality\\MethodExtender.cs",
@@ -302,12 +308,11 @@
               "RelativeToolTip": "06.01_NewFunctionality\\MethodExtender.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAYwC0AAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T11:07:19.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T11:07:19.044Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Training.csproj",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\Training.csproj",
               "RelativeDocumentMoniker": "Training.csproj",
@@ -319,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Worker.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\05.05_EventAccessor\\Worker.cs",
               "RelativeDocumentMoniker": "05.05_EventAccessor\\Worker.cs",
@@ -331,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ExtendedWorker.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\05.05_EventAccessor\\ExtendedWorker.cs",
               "RelativeDocumentMoniker": "05.05_EventAccessor\\ExtendedWorker.cs",
@@ -343,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "DelegateHelper.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\05.02_DelegateCallBack\\DelegateHelper.cs",
               "RelativeDocumentMoniker": "05.02_DelegateCallBack\\DelegateHelper.cs",
@@ -355,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "UsingDelegates.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\05.01_UsingDelegates\\UsingDelegates.cs",
               "RelativeDocumentMoniker": "05.01_UsingDelegates\\UsingDelegates.cs",
@@ -367,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Stack.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\03.01_GenericTypes\\Stack.cs",
               "RelativeDocumentMoniker": "03.01_GenericTypes\\Stack.cs",
@@ -379,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ChangedEventState.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\05.04_UsingEvents\\ChangedEventState.cs",
               "RelativeDocumentMoniker": "05.04_UsingEvents\\ChangedEventState.cs",
@@ -391,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "ChangedEventArgs.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\05.04_UsingEvents\\ChangedEventArgs.cs",
               "RelativeDocumentMoniker": "05.04_UsingEvents\\ChangedEventArgs.cs",
@@ -415,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Inventory.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\03.03_AdvancedGenerics\\Inventory.cs",
               "RelativeDocumentMoniker": "03.03_AdvancedGenerics\\Inventory.cs",
@@ -451,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -463,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "OverloadingDate.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\04.01_OperatorOverloading\\OverloadingDate.cs",
               "RelativeDocumentMoniker": "04.01_OperatorOverloading\\OverloadingDate.cs",
@@ -499,7 +504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "TrainingId.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\03.02_ArrayAndCollections\\TrainingId.cs",
               "RelativeDocumentMoniker": "03.02_ArrayAndCollections\\TrainingId.cs",
@@ -520,18 +525,6 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-18T12:48:09.517Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "GenericClass.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\03.01_GenericTypes\\GenericClass.cs",
-              "RelativeDocumentMoniker": "03.01_GenericTypes\\GenericClass.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\2125\\training-gopas\\03.01_GenericTypes\\GenericClass.cs",
-              "RelativeToolTip": "03.01_GenericTypes\\GenericClass.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T07:37:14.244Z"
             },
             {
               "$type": "Document",
