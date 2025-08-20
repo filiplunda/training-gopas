@@ -18,6 +18,7 @@ using System.Text;
 using Training._06._01_NewFunctionality;
 using System.Data.Common;
 using System;
+using System.Runtime.CompilerServices;
 
 //#nullable enable
 
@@ -25,7 +26,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Show chapters: 2-x");
+        Console.WriteLine("Show chapters: 2-13");
         var chapter = Console.ReadKey();
 
         if (int.TryParse(chapter.KeyChar.ToString(), out int number)) { }
@@ -171,7 +172,7 @@ internal class Program
 
             paymentManager.ShowPaymentHistory();
         }
-        else if(number == 3)
+        else if (number == 3)
         {
             Console.WriteLine();
             Console.WriteLine("----------------------03.01_Generic types----------------------");
@@ -330,7 +331,7 @@ internal class Program
             //Console.WriteLine(Array.IndexOf<string>(genericList, "Prague"));
             Console.WriteLine(Array.IndexOf(genericList, "Prague"));
         }
-        else if(number == 4)
+        else if (number == 4)
         {
             Console.WriteLine();
             Console.WriteLine("----------------------04.01_Operator Overloading----------------------");
@@ -365,7 +366,7 @@ internal class Program
 
             Console.WriteLine(s);
         }
-        else if(number == 5)
+        else if (number == 5)
         {
             Console.WriteLine();
             Console.WriteLine("----------------------05.01_Delegate and invocation list----------------------");
@@ -447,168 +448,319 @@ internal class Program
             extendedWorker.WorkDone += Worker_WorkDone;
             extendedWorker.DoWork();
         }
-
-        Console.WriteLine();
-        Console.WriteLine("----------------------06.01 Implicitly typed variables----------------------");
-
-        //int explicitNumber = 10; //explicitly typed
-        //var implicitNumber = 10; //implicitly typed
-        //var implicitNumber = "ABC";
-        //implicitNumber = 10; //Does not compile
-
-        //StringBuilder sb = new StringBuilder();
-        var sb = new StringBuilder();
-        StringBuilder sb2 = new(100);
-
-        int[] explicitList = { 1, 2, 3 };
-        var implicitList = new int[3]{ 1, 2, 3 };
-
-        foreach (var item in implicitList)
+        else if (number == 6)
         {
-            Console.WriteLine(item);
+
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------06.01 Implicitly typed variables----------------------");
+
+            //int explicitNumber = 10; //explicitly typed
+            //var implicitNumber = 10; //implicitly typed
+            //var implicitNumber = "ABC";
+            //implicitNumber = 10; //Does not compile
+
+            //StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
+            StringBuilder sb2 = new(100);
+
+            int[] explicitList = { 1, 2, 3 };
+            var implicitList = new int[3] { 1, 2, 3 };
+
+            foreach (var item in implicitList)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine(OptionalCalculate(a: 10, b: 20, c: 30, d: 40));
+            Console.WriteLine(OptionalCalculate(10, 20, 30));
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------06.02 Nullable value types----------------------");
+
+            //int i = null;
+            //System.Nullable<int> i = null;
+            int? nullableI = null;
+            nullableI = nullableI + 1; //remains null
+            //nullableI = nullableI.Value + 1; //Throws error
+
+            if (nullableI.HasValue)
+            {
+                nullableI = nullableI.Value + 1;
+            }
+            ;
+
+            //nullableI = nullableI.GetValueOrDefault(1) + 1;
+            nullableI = (nullableI ?? 1) + 1;
+
+            //StringBuilder sb3 = MakeStringBuilder("abc");
+            StringBuilder sb3 = MakeStringBuilder("");
+            //int lenght = sb3.Length;
+            /*int lenght; 
+            if(sb3 != null)
+            {
+                lenght = sb.Length;
+            }
+            else
+            {
+                lenght = 0;
+            }*/
+
+            int? lenght = sb3?.Length;
+            Console.WriteLine(lenght ?? 0);
+
+            string[] nullableList = null;
+            Console.WriteLine(nullableList?[0]?.Length ?? 0);
+
+            //List<int> preparelist = PrepareList(new List<int>());
+            List<int> preparelist = PrepareList();
+
+
+            foreach (var item in preparelist)
+            {
+                Console.WriteLine(item);
+
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------06.03 Nullable reference types----------------------");
+
+            List<string> nullableReferenceList = new List<string>();
+            NullableReferenceAddItem(nullableReferenceList, "A");
+            NullableReferenceAddItem(nullableReferenceList, "B");
+            NullableReferenceAddItem(nullableReferenceList, null);
+
+            foreach (string item in nullableReferenceList)
+            {
+                Console.WriteLine(item?.ToLower());
+                string s = item!;
+                Console.WriteLine(s?.ToLower());
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------06.04 Tuples----------------------");
+
+            Tuple<int, string, bool> tuplesResult = TuplesGetDate();
+            //Console.WriteLine((int)tuplesResult[0]);
+            //Console.WriteLine((string)tuplesResult[1]);
+            //Console.WriteLine((bool)tuplesResult[2]);
+            Console.WriteLine(tuplesResult.Item1);
+            Console.WriteLine(tuplesResult.Item2);
+            Console.WriteLine(tuplesResult.Item3);
+
+            var otherTuplesResult = OtherTuplesGetDate();
+            //Console.WriteLine(otherTuplesResult.Item1);
+            //Console.WriteLine(otherTuplesResult.Item2);
+            //Console.WriteLine(otherTuplesResult.Item3);
+            Console.WriteLine(otherTuplesResult.Id);
+            Console.WriteLine(otherTuplesResult.Name);
+            Console.WriteLine(otherTuplesResult.IsMember);
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------06.05 Discard and deconstruct ----------------------");
+
+            Rectangle rectangle = new Rectangle(10, 20);
+
+            //double width;
+            //double height;
+            //double perimeter;
+            //double area;
+            //rectangle.Stats(out width, out height, out perimeter, out area);
+            //rectangle.Stats(out double width, out double height, out double perimeter, out double area);
+            rectangle.Stats(out _, out _, out _, out var area);
+            Console.WriteLine("Area of the rectangle is " + area);
+
+            //var stats = rectangle.GetStats();
+            //double width;
+            //double height;
+            //double perimeter;
+            //double area2;
+            //(double width, double height, double perimeter, double area) stats = rectangle.GetStats();
+            //(width, height, perimeter, area2) = rectangle.GetStats();
+            //(double width, double height, double perimeter, double area2) = rectangle.GetStats();
+            (_, _, _, var area2) = rectangle.GetStats();
+
+            Console.WriteLine("Area of the rectangle is " + area2);
+
+            var (width, height) = rectangle;
+            Console.WriteLine($"Width: {width}, Height: {height}");
+
+            var (_, _, _, area3) = rectangle;
+            Console.WriteLine("Area of the rectangle is " + area3);
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------06.06 Index and Range operator ----------------------");
+
+            string indexText = "ABCDEFGH";
+            Console.WriteLine(indexText[0]);
+            //Console.WriteLine(indexText[indexText.Length - 1]);
+            Console.WriteLine(indexText[^1]);
+
+            //Index index1 = new Index(0, false);
+            //Index index2 = new Index(1, false);
+            //Index index3 = new Index(2, false);
+
+            Index index1 = new Index(0, true);
+            Index index2 = new Index(1, true);
+            Index index3 = new Index(2, true);
+            //int indexLenght = 8;
+            int indexLenght = indexText.Length;
+            Console.WriteLine(index1.GetOffset(indexLenght));
+            Console.WriteLine(index2.GetOffset(indexLenght));
+            Console.WriteLine(index3.GetOffset(indexLenght));
+            Console.WriteLine(new Index(2, true).GetOffset(indexLenght));
+
+            Console.WriteLine(indexText[index3.GetOffset(indexText.Length)]);
+            Console.WriteLine(indexText[^2]);
+
+            string operatorText = "ABCDEFGH";
+            int start = 1;
+            int end = 5;
+            char[] subArrayList = GetSubArray(operatorText.ToCharArray(), start, end);
+
+            foreach (var item in subArrayList)
+            {
+                Console.WriteLine(item);
+            }
+
+            Range range = new Range(1, 5);
+            Console.WriteLine($"Start: {range.Start}");
+            Console.WriteLine($"End: {range.End}");
+            Console.WriteLine($"Range: {range}");
+
+            Console.WriteLine(RuntimeHelpers.GetSubArray<char>(operatorText.ToCharArray(), range));
+            Console.WriteLine(operatorText[range]);
+            Console.WriteLine(operatorText[new Range(1, 5)]);
+            Console.WriteLine(operatorText[1..5]);
+            Console.WriteLine(operatorText[0..^5]);
+            Console.WriteLine(operatorText[^2..^0]);
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------06.07 Extension methods----------------------");
+
+            Console.WriteLine("Write a sentence");
+            string sentence = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine($"The original sentence is: {sentence}");
+
+            //sentence = sentence[0].ToString().ToUpper() + sentence.Substring(1);
+            //if (sentence[^1] != '.')
+            //{
+            //    sentence += ".";
+            //}
+            //sentence = ToSentence(sentence);
+            //var extendedString = new ExtendedString();
+            //sentence = extendedString.ToSentence(sentence);
+            //sentence = null;
+            //sentence = sentence.ToSentence();
+            sentence = sentence.ToSentence(false);
+
+            Console.WriteLine($"The changed sentence is: {sentence}");
+
+            ExtensionEmployee extensionEmployee = new ExtensionEmployee(1, "Karel", "Novak");
+            Console.WriteLine(extensionEmployee.ToString());
+            Console.WriteLine(extensionEmployee.ToString(false));
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------06.08 Object initializers----------------------");
+
+            //ObjectEmployee objectEmployee = new ObjectEmployee();
+            //objectEmployee.FirstName = "Karel";
+            //objectEmployee.LastName = "Novak";
+
+            //var objectEmployee = new ObjectEmployee
+            //{
+            //    FirstName = "Karel",
+            //    LastName = "Novak"
+            //};
+
+            var objectEmployee = new ObjectEmployee(1)
+            {
+                FirstName = "Karel",
+                LastName = "Novak",
+                Department = new ObjectDepartment
+                {
+                    Name = "IT"
+                }
+            };
+            Console.WriteLine(objectEmployee.ToString());
+
+            int[] initializerList = new int[4] { 10, 20, 30, 40 };
+            int[] initializerList2 = { 10, 20, 30, 40 };
+            List<int> initializerList3 = new List<int> { 10, 20, 30, 40 };
+            //List<int> initializerList4 =  { 10, 20, 30, 40 }; Does not work
+
+            List<ObjectEmployee> initilializerList4 = new List<ObjectEmployee>
+            {
+                new ObjectEmployee(1)
+                {
+                    FirstName = "Karel",
+                    LastName = "Novak"
+                }
+            };
+
+            System.Collections.Generic.Stack<string> intializerStack = new System.Collections.Generic.Stack<string> { "A", "B", "C", "D" };
+            System.Collections.Generic.Stack<int> intializerStack2 = new System.Collections.Generic.Stack<int> { 1, 2, 3 };
+
+            string[] initializerLetters = new string[] { "A", "B", "C", "D" };
+            Console.WriteLine(string.Join(",", initializerLetters));
+
+            //List<string> initializerList6 = new List<string>(initializerLetters);
+            List<string> initializerList6 = new List<string>(initializerLetters)
+            {
+                [1] = "b",
+                [3] = "d"
+            };
+
+            Console.WriteLine(string.Join(",", initializerList6));
+
+            Dictionary<string, string> initializerDictionary = new Dictionary<string, string>
+            {
+                ["CZ"] = "Czech republic",
+                ["FR"] = "France"
+            };
+
+            Console.WriteLine(string.Join(",", initializerDictionary));
+
+            InitDeveloper initDeveloper = new InitDeveloper
+            {
+                FirstName = "Joe",
+                LastName = "Doe"
+            };
+
+            //initDeveloper.LastName = "Parker";
+            //InitDeveloper initDeveloper2 = new InitDeveloper("Joe", "Doe");
+            var initDeveloper3 = new InitDeveloper();
+            Console.WriteLine($"{initDeveloper3.FirstName ?? "null"}" + $"{initDeveloper3.LastName ?? "null"}");
         }
 
-        Console.WriteLine(OptionalCalculate(a:10, b:20, c:30, d:40));
-        Console.WriteLine(OptionalCalculate(10,20,30));
-
         Console.WriteLine();
-        Console.WriteLine("----------------------06.02 Nullable value types----------------------");
-
-        //int i = null;
-        //System.Nullable<int> i = null;
-        int? nullableI = null;
-        nullableI = nullableI + 1; //remains null
-        //nullableI = nullableI.Value + 1; //Throws error
-
-        if (nullableI.HasValue)
-        {
-            nullableI = nullableI.Value + 1;
-        };
-
-        //nullableI = nullableI.GetValueOrDefault(1) + 1;
-        nullableI = (nullableI ?? 1) + 1;
-
-        //StringBuilder sb3 = MakeStringBuilder("abc");
-        StringBuilder sb3 = MakeStringBuilder("");
-        //int lenght = sb3.Length;
-        /*int lenght; 
-        if(sb3 != null)
-        {
-            lenght = sb.Length;
-        }
-        else
-        {
-            lenght = 0;
-        }*/
-
-        int? lenght = sb3?.Length;
-        Console.WriteLine(lenght ?? 0);
-
-        string[] nullableList =  null;
-        Console.WriteLine(nullableList?[0]?.Length ?? 0);
-
-        //List<int> preparelist = PrepareList(new List<int>());
-        List<int> preparelist = PrepareList();
-
-
-        foreach (var item in preparelist)
-        {
-            Console.WriteLine(item);
-        
-        }
-
-        Console.WriteLine();
-        Console.WriteLine("----------------------06.03 Nullable reference types----------------------");
-
-        List<string> nullableReferenceList = new List<string>();
-        NullableReferenceAddItem(nullableReferenceList, "A");
-        NullableReferenceAddItem(nullableReferenceList, "B");
-        NullableReferenceAddItem(nullableReferenceList, null);
-
-        foreach(string item in nullableReferenceList)
-        {
-            Console.WriteLine(item?.ToLower());
-            string s = item!;
-            Console.WriteLine(s?.ToLower());
-        }
-
-        Console.WriteLine();
-        Console.WriteLine("----------------------06.04 Tuples----------------------");
-
-        Tuple<int, string, bool> tuplesResult = TuplesGetDate();
-        //Console.WriteLine((int)tuplesResult[0]);
-        //Console.WriteLine((string)tuplesResult[1]);
-        //Console.WriteLine((bool)tuplesResult[2]);
-        Console.WriteLine(tuplesResult.Item1);
-        Console.WriteLine(tuplesResult.Item2);
-        Console.WriteLine(tuplesResult.Item3);
-
-        var otherTuplesResult = OtherTuplesGetDate();
-        //Console.WriteLine(otherTuplesResult.Item1);
-        //Console.WriteLine(otherTuplesResult.Item2);
-        //Console.WriteLine(otherTuplesResult.Item3);
-        Console.WriteLine(otherTuplesResult.Id);
-        Console.WriteLine(otherTuplesResult.Name);
-        Console.WriteLine(otherTuplesResult.IsMember);
-
-        Console.WriteLine();
-        Console.WriteLine("----------------------06.05 Discard and deconstruct ----------------------");
-
-        Rectangle rectangle = new Rectangle(10, 20);
-
-        //double width;
-        //double height;
-        //double perimeter;
-        //double area;
-        //rectangle.Stats(out width, out height, out perimeter, out area);
-        //rectangle.Stats(out double width, out double height, out double perimeter, out double area);
-        rectangle.Stats(out _, out _, out _, out var area);
-        Console.WriteLine("Area of the rectangle is " + area);
-
-        //var stats = rectangle.GetStats();
-        //double width;
-        //double height;
-        //double perimeter;
-        //double area2;
-        //(double width, double height, double perimeter, double area) stats = rectangle.GetStats();
-        //(width, height, perimeter, area2) = rectangle.GetStats();
-        //(double width, double height, double perimeter, double area2) = rectangle.GetStats();
-        (_, _, _, var area2) = rectangle.GetStats();
-
-        Console.WriteLine("Area of the rectangle is " + area2);
-
-        var (width, height) = rectangle;
-        Console.WriteLine($"Width: {width}, Height: {height}");
-
-        var (_, _, _, area3) = rectangle;
-        Console.WriteLine("Area of the rectangle is " + area3);
-
-        Console.WriteLine();
-        Console.WriteLine("----------------------06.06 Index and Range operator ----------------------");
-
-        string indexText = "ABCDEFGH";
-        Console.WriteLine(indexText[0]);
-        //Console.WriteLine(indexText[indexText.Length - 1]);
-        Console.WriteLine(indexText[^1]);
-
-        //Index index1 = new Index(0, false);
-        //Index index2 = new Index(1, false);
-        //Index index3 = new Index(2, false);
-
-        Index index1 = new Index(0, true);
-        Index index2 = new Index(1, true);
-        Index index3 = new Index(2, true);
-        //int indexLenght = 8;
-        int indexLenght = indexText.Length;
-        Console.WriteLine(index1.GetOffset(indexLenght));
-        Console.WriteLine(index2.GetOffset(indexLenght));
-        Console.WriteLine(index3.GetOffset(indexLenght));
-        Console.WriteLine(new Index(2, true).GetOffset(indexLenght));
-        
-        Console.WriteLine(indexText[index3.GetOffset(indexText.Length)]);
-        Console.WriteLine(indexText[^2]);
+        Console.WriteLine("----------------------07.01 Anonymous types----------------------");
     }
 
+    static string ToSentence(string sentence)
+    {
+        if (string.IsNullOrEmpty(sentence)) return sentence;
+        sentence = sentence[0].ToString().ToUpper() + sentence.Substring(1);
+        if (sentence[^1] != '.')
+        {
+            sentence += ".";
+        }
+
+        return sentence;
+    }
+
+    static char[] GetSubArray(char[] text, int start, int end)
+    {
+        char[] newArray = new char[end - start];
+
+        for(int i = 0; i < newArray.Length; i++)
+        {
+            newArray[i] = text[i + start];
+        }
+
+        return newArray;
+    }
     static Tuple<int, string, bool> TuplesGetDate()
     {
         int id = 10;
