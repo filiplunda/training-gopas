@@ -1,20 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35806.99 d17.13
+VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Training", "Training.csproj", "{E4242D31-7C11-41AE-BE6C-E32B3572D881}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Enterprise|Any CPU = Enterprise|Any CPU
+		Professional|Any CPU = Professional|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Trial|Any CPU = Trial|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E4242D31-7C11-41AE-BE6C-E32B3572D881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E4242D31-7C11-41AE-BE6C-E32B3572D881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4242D31-7C11-41AE-BE6C-E32B3572D881}.Enterprise|Any CPU.ActiveCfg = Enterprise|Any CPU
+		{E4242D31-7C11-41AE-BE6C-E32B3572D881}.Enterprise|Any CPU.Build.0 = Enterprise|Any CPU
+		{E4242D31-7C11-41AE-BE6C-E32B3572D881}.Professional|Any CPU.ActiveCfg = Professional|Any CPU
+		{E4242D31-7C11-41AE-BE6C-E32B3572D881}.Professional|Any CPU.Build.0 = Professional|Any CPU
 		{E4242D31-7C11-41AE-BE6C-E32B3572D881}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4242D31-7C11-41AE-BE6C-E32B3572D881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4242D31-7C11-41AE-BE6C-E32B3572D881}.Trial|Any CPU.ActiveCfg = Trial|Any CPU
+		{E4242D31-7C11-41AE-BE6C-E32B3572D881}.Trial|Any CPU.Build.0 = Trial|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

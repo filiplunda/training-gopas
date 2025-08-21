@@ -1,4 +1,5 @@
-﻿#define TRIAL
+﻿//#define TRIAL
+//#define RELEASE
 
 using _02._01_Overriding.Exercise6;
 using _02._01_Overriding.Exercise7;
@@ -22,6 +23,7 @@ using Training._07._02_AnonymousTypes;
 using Training._07._03_IEnumerable;
 using Training._07._04_Linq;
 using Training._08._01_PatternMatching;
+using Training._10._01_PreprocessorDirectives;
 
 //#nullable enable
 
@@ -1006,9 +1008,28 @@ internal class Program
         Console.WriteLine("----------------------10.01 Preprocessor directives----------------------");
 #if TRIAL
     Console.WriteLine("Only in Trial");
+#elif ENTERPRISE || PROFESSIONAL
+        Console.WriteLine("Only in ENTERPRISE or PROFESSIONAL");
+#elif ENTERPRISE || PROFESSIONAL || TRIAL
+        Console.WriteLine("Only in ENTERPRISE or PROFESSIONAL or TRIAL");
 #endif
-    Console.WriteLine("Every time");
+        Console.WriteLine("Every time");
 
+        MessageHelper.WriteMessage();
+
+        WriteLog("Enterprise only");
+
+#if DEBUG && RELEASE
+#line 1
+#warning A build can't be both in debug and release
+#endif
+
+    }
+
+    [System.Diagnostics.Conditional("ENTERPRISE")]
+    static void WriteLog(string message)
+    {
+        Console.WriteLine(message);
     }
 
     static string CategorizeTemperature(int temp)
