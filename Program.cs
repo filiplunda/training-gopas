@@ -1,4 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿#define TRIAL
+
 using _02._01_Overriding.Exercise6;
 using _02._01_Overriding.Exercise7;
 using _02._02_AutomaticProperties;
@@ -16,10 +17,11 @@ using Training._05._04_UsingEvents;
 using Training._05._05_EventAccessor;
 using System.Text;
 using Training._06._01_NewFunctionality;
-using System.Data.Common;
-using System;
 using System.Runtime.CompilerServices;
-using System.Collections.Generic;
+using Training._07._02_AnonymousTypes;
+using Training._07._03_IEnumerable;
+using Training._07._04_Linq;
+using Training._08._01_PatternMatching;
 
 //#nullable enable
 
@@ -734,79 +736,419 @@ internal class Program
             var initDeveloper3 = new InitDeveloper();
             Console.WriteLine($"{initDeveloper3.FirstName ?? "null"}" + $"{initDeveloper3.LastName ?? "null"}");
         }
-
-        Console.WriteLine();
-        Console.WriteLine("----------------------07.01 Anonymous types----------------------");
-
-        var anonymousEmployee = new { FirstName = "Karel", LastName = "Novak" };
-        Console.WriteLine("{0} {1}", anonymousEmployee.FirstName, anonymousEmployee.LastName);
-
-        //anonymousEmployee.FirstName = "Martin"; Anonymous types are immutable
-
-        //var anonymousEmployee2 = new { FirstName = "Karel", LastName = "Novak" };
-        var anonymousEmployee2 = new { LastName = "Novak", FirstName = "Karel" };
-
-
-        Console.WriteLine(anonymousEmployee.Equals(anonymousEmployee2));
-        Console.WriteLine(anonymousEmployee.GetHashCode());
-
-        Console.WriteLine(anonymousEmployee.GetType().ToString());
-        Console.WriteLine(anonymousEmployee2.GetType().ToString());
-
-        Console.WriteLine(anonymousEmployee.GetType().BaseType.ToString());
-        Console.WriteLine(anonymousEmployee2.GetType().BaseType.ToString());
-
-        ShowEmployeeUsingReflection(anonymousEmployee);
-        ShowEmployeeUsingDynamicType(anonymousEmployee);
-        ShowEmployeeUsingGenerics(anonymousEmployee);
-        ShowEmployeeUsingTuple(new Tuple<string, string>(anonymousEmployee.FirstName, anonymousEmployee.LastName));
-        ShowEmployeeUsingTuple(Tuple.Create(anonymousEmployee.FirstName, anonymousEmployee.LastName));
-        ShowEmployeeUsingValueTuple((anonymousEmployee.FirstName, anonymousEmployee.LastName));
-
-        //var anonymousList = new[] { new { FirstName = "ListName", LastName = "ListSurname" } };
-        var anonymousList = new[] { new { FirstName = "", LastName = "" } }.ToList();
-        anonymousList.Clear();
-
-        anonymousList.Add(new { FirstName = "Karel", LastName = "Novak" });
-        anonymousList.Add(new { FirstName = "Martin", LastName = "Novak" });
-
-        foreach (var item in anonymousList)
+        else if (number == 7)
         {
-            Console.WriteLine("{0} {1}", item.FirstName, item.LastName);
-        }
+            Console.WriteLine();
+            Console.WriteLine("----------------------07.01 Anonymous types----------------------");
 
-        Console.WriteLine();
-        Console.WriteLine("----------------------07.02 Anonymous methods and Lambda expressions----------------------");
+            var anonymousEmployee = new { FirstName = "Karel", LastName = "Novak" };
+            Console.WriteLine("{0} {1}", anonymousEmployee.FirstName, anonymousEmployee.LastName);
 
-        int[] anonymousArray = { 10, 20, 30, 40 };
-        AnonymousListArray(anonymousArray);
+            //anonymousEmployee.FirstName = "Martin"; Anonymous types are immutable
 
-        AnonymousListArrayDelegate anonymousDelegate = new AnonymousListArrayDelegate(AnonymousListArray);
+            //var anonymousEmployee2 = new { FirstName = "Karel", LastName = "Novak" };
+            var anonymousEmployee2 = new { LastName = "Novak", FirstName = "Karel" };
 
-        anonymousDelegate(new int[] { 10, 20, 30, 40 });
 
-        AnonymousListArrayDelegate anonymousDelegate2;
+            Console.WriteLine(anonymousEmployee.Equals(anonymousEmployee2));
+            Console.WriteLine(anonymousEmployee.GetHashCode());
 
-        anonymousDelegate2 = delegate (int[] list) 
-        {
-            foreach (int item in list)
+            Console.WriteLine(anonymousEmployee.GetType().ToString());
+            Console.WriteLine(anonymousEmployee2.GetType().ToString());
+
+            Console.WriteLine(anonymousEmployee.GetType().BaseType.ToString());
+            Console.WriteLine(anonymousEmployee2.GetType().BaseType.ToString());
+
+            ShowEmployeeUsingReflection(anonymousEmployee);
+            ShowEmployeeUsingDynamicType(anonymousEmployee);
+            ShowEmployeeUsingGenerics(anonymousEmployee);
+            ShowEmployeeUsingTuple(new Tuple<string, string>(anonymousEmployee.FirstName, anonymousEmployee.LastName));
+            ShowEmployeeUsingTuple(Tuple.Create(anonymousEmployee.FirstName, anonymousEmployee.LastName));
+            ShowEmployeeUsingValueTuple((anonymousEmployee.FirstName, anonymousEmployee.LastName));
+
+            //var anonymousList = new[] { new { FirstName = "ListName", LastName = "ListSurname" } };
+            var anonymousList = new[] { new { FirstName = "", LastName = "" } }.ToList();
+            anonymousList.Clear();
+
+            anonymousList.Add(new { FirstName = "Karel", LastName = "Novak" });
+            anonymousList.Add(new { FirstName = "Martin", LastName = "Novak" });
+
+            foreach (var item in anonymousList)
+            {
+                Console.WriteLine("{0} {1}", item.FirstName, item.LastName);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------07.02 Anonymous methods and Lambda expressions----------------------");
+
+            int[] anonymousArray = { 10, 20, 30, 40 };
+            AnonymousListArray(anonymousArray);
+
+            AnonymousListArrayDelegate anonymousDelegate = new AnonymousListArrayDelegate(AnonymousListArray);
+
+            anonymousDelegate(new int[] { 10, 20, 30, 40 });
+
+            AnonymousListArrayDelegate anonymousDelegate2;
+
+            anonymousDelegate2 = delegate (int[] list)
+            {
+                foreach (int item in list)
+                {
+                    Console.WriteLine(item);
+                }
+            };
+
+            anonymousDelegate2(new int[] { 10, 20, 30, 40 });
+
+            Array.ForEach<int>(anonymousArray, delegate (int item) { Console.WriteLine(item); });
+
+            //int[] funcList = Array.FindAll<int>(anonymousArray, delegate(int item) { return item > 20; });
+
+            //int[] funcList = Array.FindAll<int>(anonymousArray, (int item) => { return item > 20; });
+
+            //int[] funcList = Array.FindAll<int>(anonymousArray, (item) => (item > 20 ));
+
+            int[] funcList = Array.FindAll<int>(anonymousArray, item => item > 20);
+
+            Array.ForEach<int>(funcList, delegate (int item) { Console.WriteLine(item); });
+
+            ShowLamdaResults(10, 20, new IntDelegate(LamdaSum));
+            ShowLamdaResults(10, 20, new IntDelegate(LamdaMultiply));
+
+            ShowLamdaResults(10, 20, delegate (int a, int b) { return a - b; });
+            ShowLamdaResults(10, 20, (a, b) => a + b);
+            ShowLamdaResults(10, 20, (a, b) => a * b);
+            ShowLamdaResults(10, 20, (a, b) => a - b); //We don't need to generate the delegate at all and rather use this
+
+            ShowLamdaResults("A", "B", (a, b) => a + "" + b);
+            ShowLamdaResults("A", "B", (a, b) => a + b + ".");
+            ShowLamdaResults(DateTime.Now, 14, (a, b) => a.AddDays(b));
+
+            AnonymousEmployee anonEmployee = new AnonymousEmployee(1, "Paul");
+
+            //anonEmployee.ID = 2;
+
+            Console.WriteLine(anonEmployee.ToString());
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------07.02.01 Excercise----------------------");
+
+            PerformLamdaOperation(20, 10, "addition", (a, b) => a + b);
+            PerformLamdaOperation(20, 10, "subtraction", (a, b) => a - b);
+            PerformLamdaOperation(20, 10, "multiplication", (a, b) => a * b);
+            PerformLamdaOperation(20, 10, "division", (a, b) => a / b);
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------07.03 Extension methods and IEnumerable----------------------");
+
+            var trainings = new EnumerableTrainings();
+            foreach (var training in trainings)
+            {
+                Console.WriteLine(training.Name);
+            }
+
+            foreach (var training in trainings.MyFindAll(x => x.Name.Contains("ASP")))
+            {
+                Console.WriteLine(training.Name);
+            }
+
+            foreach (var training in trainings.MyFindAll(x => x.Name.Contains("ASP")).MyFindAll(t => t.Name.Contains("MVC")))
+            {
+                Console.WriteLine(training.Name);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------07.04 Linq----------------------");
+
+            List<LinqTraining> linqTrainings = new List<LinqTraining>
+            {
+                new LinqTraining("Programming C"),
+                new LinqTraining("ASP.NET Security"),
+                new LinqTraining("ASP.NET MVC"),
+                new LinqTraining("Programming Java"),
+            };
+
+            foreach (var item in linqTrainings)
+            {
+                Console.WriteLine(item.Name);
+            }
+
+            foreach (var item in linqTrainings.Where(x => x.Name.Contains("ASP")))
+            {
+                Console.WriteLine(item.Name);
+            }
+
+            foreach (var item in linqTrainings.Where(x => x.Name.Contains("ASP")).OrderBy(x => x.Name))
+            {
+                Console.WriteLine(item.Name);
+            }
+
+            foreach (var item in linqTrainings.Where(x => x.Name.Contains("ASP")).OrderByDescending(x => x.Name))
+            {
+                Console.WriteLine(item.Name);
+            }
+
+            foreach (var item in linqTrainings.Where(x => x.Name.Contains("ASP")).OrderByDescending(x => x.Name).Select(x => x.Name))
             {
                 Console.WriteLine(item);
             }
-        };
 
-        anonymousDelegate2(new int[] { 10, 20, 30, 40 });
+            int linqId = 1;
+            /*var linqResult = linqTrainings.OrderByDescending(x => x.Name)
+                                    .Where(t => t.Name.Contains("ASP"))
+                                    .Select(x => new { Id = linqId++, TrainingName = x.Name.ToUpper()});*/
 
-        Array.ForEach<int>(anonymousArray, delegate(int item) { Console.WriteLine(item); });
+            var linqResult = from x in linqTrainings
+                             where x.Name.Contains("ASP")
+                             orderby x.Name descending
+                             select new { Id = linqId++, TrainingName = x.Name.ToUpper() };
 
-        int[] funcList = Array.FindAll<int>(anonymousArray, delegate(int item) { return item > 20; });
+            foreach (var item in linqResult)
+            {
+                Console.WriteLine($"Id: {item.Id}, Name: {item.TrainingName}");
+            }
 
-        Array.ForEach<int>(funcList, delegate (int item) { Console.WriteLine(item); });
+            var linqResultList = linqResult.ToList();
 
+            Console.WriteLine($"Id: {linqResultList[0].Id}, Name: {linqResultList[0].TrainingName}");
+
+            linqResultList.ForEach(t => Console.WriteLine($"Id: {t.Id}, Value: {t.TrainingName}"));
+
+            var linqItems = new[] { 1M, 2M, 3M, 4M };
+
+            Array.ForEach(linqItems.Select(x => 10 * x).ToArray(), x => Console.WriteLine("Number: " + x));
+
+            //var myLinqItems = linqItems.Select(x => 10 * x).ToArray();
+            var myLinqItems = (from x in linqItems where x > 2 select 10 * x).ToArray();
+
+            Array.ForEach(myLinqItems, number => Console.WriteLine("Number: " + number));
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------07.05 Closure----------------------");
+
+            int closureI = 0;
+            if (true)
+            {
+                Console.WriteLine("i =" + closureI);
+                Console.WriteLine("j =" + closureJ);
+            }
+
+            MyClosureDelegate closureDelegate = delegate ()
+            {
+                closureI++;
+                closureJ++;
+            };
+
+            closureDelegate();
+            Console.WriteLine("i =" + closureI);
+            Console.WriteLine("j =" + closureJ);
+
+            DoIt(closureDelegate);
+            Console.WriteLine("i =" + closureI);
+            Console.WriteLine("j =" + closureJ);
+
+            MyClosureDelegate closureDelegate1 = makePerson("Joe", "Doe");
+            MyClosureDelegate closureDelegate2 = makePerson("Joe", "Bow");
+
+            closureDelegate1();
+            closureDelegate2();
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------07.06 Closure excercise----------------------");
+
+            List<Action> excerciseList = new List<Action>();
+
+            for (int i = 0; i < 100; i++)
+            {
+                int j = i;
+                excerciseList.Add(new Action(() => { Console.WriteLine("Hello " + (j + 1)); }));
+            }
+        }
+        else if (number == 8)
+        {
+            Console.WriteLine();
+            Console.WriteLine("----------------------08.01 Pattern Matching----------------------");
+
+            MatchingMakeAnimalSound(new MatchingDog());
+            MatchingMakeAnimalSound(new MatchingCat() { Color = "White" });
+            MatchingMakeAnimalSound(null);
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------08.02 Excersise----------------------");
+
+            Console.WriteLine($"Temperature -5C is {CategorizeTemperature(-5)}.");
+            Console.WriteLine($"Temperature 20C is {CategorizeTemperature(20)}.");
+            Console.WriteLine($"Temperature 30C is {CategorizeTemperature(30)}.");
+
+
+            Console.WriteLine($"Temperature -5C is {CategorizeTemperature2(-5)}.");
+            Console.WriteLine($"Temperature 20C is {CategorizeTemperature2(20)}.");
+            Console.WriteLine($"Temperature 30C is {CategorizeTemperature2(30)}.");
+
+
+        }
+        else if (number == 9)
+        {
+            Console.WriteLine();
+            Console.WriteLine("----------------------09.01 Using Record----------------------");
+
+            List<string> recordList = new List<string>() { "Joe", "John", "Paul", "Joe", "John", "Jane" };
+
+            GetDistinctValue(recordList);
+
+            foreach (var item in GetDistinctValue(recordList))
+            {
+                Console.WriteLine($"{item.Value}: {item.Count}");
+            }
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("----------------------10.01 Preprocessor directives----------------------");
+#if TRIAL
+    Console.WriteLine("Only in Trial");
+#endif
+    Console.WriteLine("Every time");
 
     }
 
-    delegate void AnonymousListArrayDelegate(int[] list);
+    static string CategorizeTemperature(int temp)
+    {
+        return temp switch
+        {
+            < 0 => "Freezing",
+            <= 15 => "Cold",
+            <= 25 => "Mild",
+            <= 35 => "Warm",
+            _ => "Hot"
+        };
+    }
+
+    static string CategorizeTemperature2(int temp) => temp switch
+    {
+        < 0 => "Freezing",
+        <= 15 => "Cold",
+        <= 25 => "Mild",
+        <= 35 => "Warm",
+        _ => "Hot"
+    };
+
+    record RecordName(string Value, int Count);
+
+    static List<RecordName> GetDistinctValue(List<string> list)
+    {
+        var names = list.GroupBy(s => s)
+            .Select(g => new RecordName(
+                g.Key,
+                g.Count()
+                )).ToList();
+
+        /*foreach(var item in names)
+        {
+            Console.WriteLine($"{item.Value}: {item.Count}");
+        }*/
+
+        return names;
+    }
+
+    static void MatchingMakeAnimalSound(MatchingAnimal animal)
+    {
+        /*if (animal is MatchingDog dog)
+        {
+            //MatchingDog dog = (MatchingDog)animal;
+            dog.Whoof();
+        }
+        else if (animal is MatchingCat cat)
+        {
+            //MatchingCat cat = (MatchingCat)animal;
+            cat.Meow();
+        }
+        else
+        {
+            //cat = new MatchingCat();
+            //dog = new MatchingDog();
+
+            //cat.Meow;
+            //dog.Whoof;
+            Console.WriteLine("Unknown animal");
+        }*/
+
+        switch (animal)
+        {
+            case MatchingDog dog:
+                dog.Whoof();
+                break;
+            case MatchingCat cat when (cat.Color == "White"):
+                Console.WriteLine("I am white as snow");
+                cat.Meow();
+                break;
+            case null:
+                Console.WriteLine("Animal is missing");
+                break;
+            default:
+                Console.WriteLine("Unknow animal");
+                break;
+
+        }
+
+    }
+
+    delegate void MyClosureExcerciseDelegate();
+
+
+    static void DoIt(MyClosureDelegate d)
+    {
+        d();
+    }
+
+    static MyAnotherClosureDelegate makePerson = delegate (string firstName, string lastName)
+    {
+        return delegate ()
+        {
+            Console.WriteLine("{0} {1}", firstName, lastName);
+        };
+    };
+    
+    delegate void MyClosureDelegate();
+
+    delegate MyClosureDelegate MyAnotherClosureDelegate(string FirstName, string LastName);
+
+
+    static int closureJ = 0;
+
+    static double PerformLamdaOperation(double a, double b, string operationName, Func<double, double, double> operation)
+    {
+        Console.WriteLine($"Performing {operationName} of {a} and {b}");
+        var result = operation(a, b);
+        Console.WriteLine($"Result of operation: {result}");
+        return result;
+    }
+
+    static void ShowLamdaResults(string a, string b, Func<string, string, string> d)
+    {
+        Console.WriteLine(d(a, b));
+    }
+
+    static void ShowLamdaResults(DateTime a, int b, Func<DateTime, int, DateTime> d)
+    {
+        Console.WriteLine(d(a, b));
+    }
+
+    static void ShowLamdaResults(int a, int b, IntDelegate d)
+    {
+        Console.WriteLine(d(a, b));
+    }
+
+    delegate int IntDelegate(int a, int b);
+
+    static int LamdaSum(int a, int b)
+    {
+        return a + b;
+    }
+
+    static int LamdaMultiply(int a, int b)
+    {
+        return a * b;
+    }
 
     static void AnonymousListArray(int[] list)
     {
@@ -815,6 +1157,8 @@ internal class Program
             Console.WriteLine(item);
         }
     }
+
+    delegate void AnonymousListArrayDelegate(int[] list);
 
     static void ShowEmployeeUsingReflection(object o)
     {
