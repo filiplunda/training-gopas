@@ -24,6 +24,12 @@ using Training._07._03_IEnumerable;
 using Training._07._04_Linq;
 using Training._08._01_PatternMatching;
 using Training._10._01_PreprocessorDirectives;
+using Training._10._02_Attributes;
+using Training._11._01_ResourceManagement;
+using Training._11._02_WeekReferenceAndGenerations;
+using Training._13._01_XML;
+using System.Xml.Serialization;
+using System.Text.Json;
 
 //#nullable enable
 
@@ -1003,9 +1009,10 @@ internal class Program
                 Console.WriteLine($"{item.Value}: {item.Count}");
             }
         }
-
-        Console.WriteLine();
-        Console.WriteLine("----------------------10.01 Preprocessor directives----------------------");
+        else if (number == 10)
+        {
+            Console.WriteLine();
+            Console.WriteLine("----------------------10.01 Preprocessor directives----------------------");
 #if TRIAL
     Console.WriteLine("Only in Trial");
 #elif ENTERPRISE || PROFESSIONAL
@@ -1013,17 +1020,290 @@ internal class Program
 #elif ENTERPRISE || PROFESSIONAL || TRIAL
         Console.WriteLine("Only in ENTERPRISE or PROFESSIONAL or TRIAL");
 #endif
-        Console.WriteLine("Every time");
+            Console.WriteLine("Every time");
 
-        MessageHelper.WriteMessage();
+            MessageHelper.WriteMessage();
 
-        WriteLog("Enterprise only");
+            WriteLog("Enterprise only");
 
 #if DEBUG && RELEASE
 #line 1
 #warning A build can't be both in debug and release
 #endif
+            Console.WriteLine();
+            Console.WriteLine("----------------------10.02 Attributes----------------------");
 
+            AttributesCustomer attributesCustomer = new AttributesCustomer();
+
+            attributesCustomer.Id = 1;
+            attributesCustomer.FirstName = "UggluJoebadBoy";
+            attributesCustomer.LastName = "Doe";
+
+            Console.WriteLine(attributesCustomer.GetFullName());
+
+            foreach (string item in AttributeHelper.GetAliases(attributesCustomer))
+            {
+                Console.WriteLine(item);
+            }
+
+            AttributeHelper.Validate(attributesCustomer);
+        }
+        else if (number == 11)
+        {
+            Console.WriteLine();
+            Console.WriteLine("----------------------11.01 IDisposable and resource release----------------------");
+
+            ResourceFileStream fileStream = new ResourceFileStream();
+
+            fileStream.Open();
+            //throw new Exception("invalid FileStream operation");
+            //doing something with stream
+            fileStream.Close();
+
+            //try
+            //{
+            //    fileStream.Open();
+            //    throw new Exception("invalid FileStream operation");
+            //}
+            //finally
+            //{
+            //    if (fileStream != null)
+            //    {
+            //        fileStream.Close();
+            //    }
+            //}
+
+            using (ResourceFileStream fileStream2 = new Training._11._01_ResourceManagement.ResourceFileStream())
+            {
+                fileStream2.Open();
+                //throw new Exception("invalid FileStream operation");
+            }
+
+            //Training._11._01_ResourceManagement.FileStream fileStream3 = new Training._11._01_ResourceManagement.FileStream();
+            //fileStream3.Open();
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------11.02 Week references and generation----------------------");
+
+            GenerationHelper helper = new GenerationHelper();
+            helper.UseObject();
+            helper.UseObject();
+            helper.UseObject();
+
+            GC.Collect();
+            helper.UseObject();
+
+            helper.AllowObjectToBeGarbaged();
+            helper.UseObject();
+            helper.UseObject();
+
+            helper.AllowObjectToBeGarbaged();
+            GC.Collect();
+            helper.UseObject();
+            helper.UseObject();
+
+            Console.WriteLine();
+
+            GenerationHelper generationHelper = new GenerationHelper();
+            generationHelper.UseObject();
+            generationHelper.ShowGenInfo();
+
+            GC.Collect();
+            generationHelper.ShowGenInfo();
+            GC.Collect();
+            generationHelper.ShowGenInfo();
+            GC.Collect();
+            generationHelper.ShowGenInfo();
+
+            /*generationHelper.AllowObjectToBeGarbaged();
+            GC.Collect();
+            generationHelper.ShowGenInfo();*/
+
+            generationHelper.AllowObjectToBeGarbaged();
+            GC.Collect(2);
+            generationHelper.ShowGenInfo();
+        }
+        else if (number == 12)
+        {
+            Console.WriteLine();
+            Console.WriteLine("----------------------12.01 Working with Streams----------------------");
+
+            string myDocPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            string filePathAndName = Path.Combine(myDocPath, "dataUTF8.txt");
+
+            using (FileStream fs = new FileStream(filePathAndName, FileMode.Create, FileAccess.Write))
+            {
+                BinaryWriter bw = new BinaryWriter(fs);
+                bw.Write(10);
+                bw.Write("Hello");
+                bw.Write(true);
+
+                fs.Flush();
+
+                Console.WriteLine("CanRead: {0}, CanWrite: {1}, CanSeek: {2}, CanTimeout: {3}", fs.CanRead, fs.CanWrite, fs.CanSeek, fs.CanTimeout);
+            }
+
+            using (FileStream fs = new FileStream(filePathAndName, FileMode.Open, FileAccess.Read))
+            {
+                BinaryReader br = new BinaryReader(fs);
+                Console.WriteLine(br.ReadInt32());
+                Console.WriteLine(br.ReadString());
+                Console.WriteLine(br.ReadBoolean());
+            }
+
+            using (MemoryStream fs = new MemoryStream())
+            {
+                BinaryWriter bw = new BinaryWriter(fs);
+                bw.Write(10);
+                bw.Write("Hi");
+                bw.Write(true);
+
+                fs.Flush();
+                fs.Position = 0;
+
+                BinaryReader br = new BinaryReader(fs);
+                Console.WriteLine(br.ReadInt32());
+                Console.WriteLine(br.ReadString());
+                Console.WriteLine(br.ReadBoolean());
+            }
+
+            filePathAndName = Path.ChangeExtension(filePathAndName, "txt");
+
+            using (StreamWriter sw = new StreamWriter(filePathAndName))
+            {
+                sw.Write(true);
+                sw.Write(";");
+                sw.Write(1234);
+                sw.Write(";");
+                sw.Write("Hi");
+                sw.Write(";");
+            }
+
+            using (StreamReader sr = new StreamReader(filePathAndName))
+            {
+                Console.WriteLine(sr.ReadLine());
+            }
+
+            using (FileStream fs = new FileStream(filePathAndName, FileMode.Create, FileAccess.Write))
+            {
+                Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+                System.Text.Encoding encoding = Encoding.UTF8;
+
+                using (StreamWriter sw = new StreamWriter(fs, encoding))
+                {
+                    sw.Write("The too-yellow horse whinned devilish odes.");
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("----------------------12.02 Working with file system----------------------");
+
+            string filePath = "c:\\hello.txt";
+
+            using (StreamWriter sw = File.CreateText(filePath))
+            {
+                sw.Write("Hello word");
+            }
+
+            //File.Copy(filePath, "c:\\hello.backup");
+
+            string fileBackupPath = string.Format("{0}/{1}.backup", Path.GetDirectoryName(filePath), Path.GetFileNameWithoutExtension(filePath));
+
+            if (File.Exists(fileBackupPath))
+            {
+                File.Delete(fileBackupPath);
+            }
+
+            File.Copy(filePath, fileBackupPath);
+
+            //string fileBackup2Path = string.Format("{0}/{1}.backup2", Path.GetDirectoryName(filePath), Path.GetFileNameWithoutExtension(filePath));
+
+            //FileInfo fi = new FileInfo(filePath);
+
+            //fi.CopyTo(fileBackup2Path);
+
+            foreach (string f in Directory.GetFiles("c:\\", "*.*"))
+            {
+                //Console.WriteLine(f);
+                Console.WriteLine(Path.GetFileName(f));
+            }
+
+            DirectoryInfo dir = new DirectoryInfo("c:\\");
+            foreach (FileInfo f in dir.GetFiles("*.*"))
+            {
+                string name = f.FullName;
+                Console.WriteLine(name);
+            }
+
+            FileSystemWatcher watcher = new FileSystemWatcher();
+
+            watcher.Path = "c:\\";
+            watcher.Filter = "*.txt";
+            watcher.NotifyFilter = NotifyFilters.FileName;
+            watcher.Renamed += watcher_Renamed;
+            watcher.Deleted += watcher_Deleted;
+            watcher.EnableRaisingEvents = true;
+
+            Console.ReadLine();
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("----------------------13.01 XML Serialization----------------------");
+
+        XMLEmployee xmlE1 = new XMLEmployee(1, "Homer", "Simpson", 5000, 123, "Nuclear technician");
+
+        Console.WriteLine("Original subject");
+        Console.WriteLine(xmlE1.ToString());
+
+        Console.WriteLine("Serializing...");
+
+        using (FileStream fs = new FileStream("Test.xml", FileMode.Create, FileAccess.Write))
+        {
+            XmlSerializer formatter = new XmlSerializer(xmlE1.GetType());
+            formatter.Serialize(fs, xmlE1);
+        }
+
+        System.Threading.Thread.Sleep(2000);
+
+        Console.WriteLine("Deserializing...");
+        using (FileStream fs = new FileStream("Test.xml", FileMode.Open, FileAccess.Read))
+        {
+            XmlSerializer formatter = new XmlSerializer(xmlE1.GetType());
+            var xmlE2 = (XMLEmployee)formatter.Deserialize(fs);
+            Console.WriteLine(xmlE2.ToString());
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("----------------------13.03 JSON Serialization----------------------");
+
+        XMLEmployee jsonE1 = new XMLEmployee(1, "Homer", "Simpson", 5000, 123, "Nuclear technician");
+        Console.WriteLine("Original subject");
+        Console.WriteLine(jsonE1.ToString());
+
+        Console.WriteLine("Serializing...");
+
+        using (FileStream fs = new FileStream("employee.json", FileMode.Create, FileAccess.Write))
+        {
+            JsonSerializer.Serialize(fs, jsonE1);
+        }
+
+        Console.WriteLine("DeSerializing...");
+        using (FileStream fs = new FileStream("employee.json", FileMode.Open, FileAccess.Read))
+        {
+            var xmlE2 = JsonSerializer.Deserialize<XMLEmployee>(fs);
+            Console.WriteLine(xmlE2.ToString());
+        }
+    }
+
+    static void watcher_Deleted(object sender, FileSystemEventArgs e)
+    {
+        Console.WriteLine("deleted:" + e.Name);
+    }
+
+    static void watcher_Renamed(object sender, FileSystemEventArgs e)
+    {
+        Console.WriteLine("renamed" + e.Name);
     }
 
     [System.Diagnostics.Conditional("ENTERPRISE")]
